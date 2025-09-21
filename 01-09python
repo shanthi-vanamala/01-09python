@@ -1,0 +1,86 @@
+#Create your own class which can implement all arthematic operations. Create 2 objects for it and call above implemented methods. Add model_num, made_in variables to obj1. Add color and discount to obj2. print model_num, made_in, color, discount to both the object
+class Calculator:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+    
+    # Arithmetic operations
+    def add(self):
+        return self.a + self.b
+    
+    def subtract(self):
+        return self.a - self.b
+    
+    def multiply(self):
+        return self.a * self.b
+    
+    def divide(self):
+        if self.b != 0:
+            return self.a / self.b
+        else:
+            return "Division by zero not allowed"
+    
+    def modulus(self):
+        return self.a % self.b
+    
+    def power(self):
+        return self.a ** self.b
+
+
+# Create objects
+obj1 = Calculator(10, 5)
+obj2 = Calculator(7, 3)
+
+# Adding extra attributes
+obj1.model_num = "TX100"
+obj1.made_in = "India"
+
+obj2.color = "Red"
+obj2.discount = "10%"
+
+# Call arithmetic methods
+print("Object 1 Operations:")
+print("Add:", obj1.add())
+print("Subtract:", obj1.subtract())
+print("Multiply:", obj1.multiply())
+print("Divide:", obj1.divide())
+print("Modulus:", obj1.modulus())
+print("Power:", obj1.power())
+
+print("\nObject 2 Operations:")
+print("Add:", obj2.add())
+print("Subtract:", obj2.subtract())
+print("Multiply:", obj2.multiply())
+print("Divide:", obj2.divide())
+print("Modulus:", obj2.modulus())
+print("Power:", obj2.power())
+
+# Print attributes
+print("\nAttributes of obj1:")
+print("Model Number:", obj1.model_num)
+print("Made In:", obj1.made_in)
+
+print("\nAttributes of obj2:")
+print("Color:", obj2.color)
+print("Discount:", obj2.discount)
+
+
+
+
+
+
+#define self
+#It is used to access variables and methods of that particular object.
+#Every time we create an object, Python automatically passes the reference of that object as the first argument (self).
+class Demo:
+    def __init__(self, name):
+        self.name = name   # 'self' stores object-specific data
+
+    def show(self):
+        print("Name is:", self.name)
+
+
+obj = Demo("Python")
+obj.show()   # internally Demo.show(obj)
+
+
